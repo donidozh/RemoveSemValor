@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ajustar Layout Documento GED
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Ajusta largura de tabelas, remove marca d'água e bloqueia impressão automática no GED
 // @author       Você
 // @match        http://sigeduca.seduc.mt.gov.br/ged/hwgedteladocumento.aspx?0,36
@@ -10,6 +10,10 @@
 
 (function() {
     'use strict';
+
+    // Verifica se existe a imagem "documentosemvalor.jpg"
+    const semValorImg = document.querySelector('img[src="imagem/documentosemvalor.jpg"]');
+    if (!semValorImg) return; // Se não existir, não faz nada
 
     // Cria o botão
     const btn = document.createElement("button");
@@ -65,7 +69,7 @@
             }
         });
 
-        btn.innerText = "✅ Marca d'agua Removida";
+        btn.innerText = "✅ Marca d'água Removida";
         btn.disabled = true;
         btn.style.background = "#28a745"; // verde
     }
