@@ -2,7 +2,7 @@
 // @name         Ajustar Layout Documento GED
 // @namespace    http://tampermonkey.net/
 // @version      1.2
-// @description  Ajusta largura de tabelas, remove marca d'água e bloqueia impressão automática no GED
+// @description  Ajusta largura de tabelas e remove marca d'água do histórico.
 // @author       Você
 // @match        http://sigeduca.seduc.mt.gov.br/ged/hwgedteladocumento.aspx?0,36
 // @grant        GM_addStyle
